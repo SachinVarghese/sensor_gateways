@@ -1,0 +1,38 @@
+<ng-container>
+
+  <mat-sidenav-container class="main-container">
+    
+    
+    <mat-sidenav class="sidebar-container" mode="side" opened>
+        <mat-selection-list class="sidebar-header">
+            <mat-list-item>
+              <h3 matLine> UBIWORX </h3>
+            </mat-list-item>
+        </mat-selection-list>
+        <mat-selection-list>
+          <mat-list-item *ngFor="let menuItem of menuItems" [class.none]="selectedMenu !== menuItem.base" [class.selected]="selectedMenu === menuItem.name.toLowerCase()">
+            <mat-icon matListIcon>{{menuItem.icon}}</mat-icon>
+            <h5 matLine><a routerLink="{{menuItem.link}}">{{menuItem.name}}</a></h5>
+          </mat-list-item>
+        </mat-selection-list>
+        <mat-selection-list class="sidebar-footer">
+          <mat-list-item>
+            <mat-icon matListIcon>assistant</mat-icon>
+            <h5 matLine>Help Center</h5>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>settings</mat-icon>
+            <h5 matLine>Settings</h5>
+          </mat-list-item>
+        </mat-selection-list>
+    </mat-sidenav>
+    
+    
+    <mat-sidenav-content style="background-color:#DDDDDF;">
+      <router-outlet></router-outlet>       
+    </mat-sidenav-content>
+
+
+  </mat-sidenav-container>
+
+</ng-container>

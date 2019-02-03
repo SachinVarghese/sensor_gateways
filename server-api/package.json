@@ -1,0 +1,18 @@
+{
+  "name": "server-api",
+  "version": "1.0.0",
+  "description": "Server API that gets data from ubiworx API",
+  "main": "server.js",
+  "scripts": {
+    "server": "APIKEY=AM1lYNcH56zUjk47JSuXe2k4AflKMcXAMWVN2cV9Pq8lOxMTlsSPhAxNb91Xwk5a node ./server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robert B",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.6.2",
+    "koa-router": "^7.4.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5"
+  }
+}
